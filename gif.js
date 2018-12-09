@@ -34,8 +34,8 @@ function addButton(show){
 
 function populateGIFContainer(show){
 	$.ajax({
-		url: "https://api.giphy.com/v1/gifs/search?" + show + 
-		"api_key=qhP7bFLyHhUgB5YRORlOFhcvD8y5r8yk" + cutOffRating + "&limit=" + numberOfGIFs,
+		url: "https://api.giphy.com/v1/gifs/search?q=" + show + 
+		"&api_key=qhP7bFLyHhUgB5YRORlOFhcvD8y5r8yk&rating=" + cutOffRating + "&limit=" + numberOfGIFs,
 		method: "GET"
 	}).then(function(response){
 		response.data.forEach(function(element){
